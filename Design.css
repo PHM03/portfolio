@@ -197,7 +197,7 @@ span{
 .typing-text span::before{
     content: "Gamer";
     color:  rgb(79, 46, 228);
-    animation: words 20s infinite;
+    animation: words 10s infinite;
 }
 
 .typing-text span::after{
