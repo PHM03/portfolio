@@ -165,6 +165,77 @@ span{
     box-shadow: 0 0 25px rgb(79, 46, 228);
 }
 
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    background-color: black;
+    padding: 20px;
+  }
 
-
-
+  .responsive-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* HIDE menu on large screens */
+  @media (min-width: 1025px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    .nav-links {
+      display: flex;
+    }
+  }
+  
+  /* SHOW menu toggle on tablet & mobile */
+  @media (max-width: 1024px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 10px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  }
