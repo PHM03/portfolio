@@ -1,0 +1,38 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(79, 46, 228) !important;
+}
+
+.nav-link.active {
+    color: rgb(79, 46, 228) !important;
+}
+
+.techstack {
+    padding-top: 7rem; /* Adjust the top padding to create space below the navbar */
+    padding-bottom: 5rem; /* Optional: Add bottom padding for better spacing */
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: contain;
+    background-color: #333;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
