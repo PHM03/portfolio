@@ -211,30 +211,6 @@ span{
     animation: cursor 0.6 infinite;
 }
 
-@keyframes cursor{
-    to{
-        border-left: 3px solid rgb(79, 46, 228);
-    }
-}
-
-@keyframes words{
-    0%, 20%{
-        content: " Gamer"
-    }
-    21%, 40%{
-        content:" Student"
-    }
-    41%, 60%{
-        content:"  Game Streamer"
-    }
-    61%, 80%{
-        content:" Tiktok Content Creator"
-    }
-    81%, 100%{
-        content: " Youtuber"
-    }
-}
-
 @media (max-width: 1000px){
     .home{
         gap: 4rem;
