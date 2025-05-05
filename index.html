@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Design.css">
     </script>
  
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+   
     
   </head>
 <body class="bg-gray-900 text-white font-montserrat">
@@ -31,7 +31,7 @@
             <ul id="nav-links" class="hidden md:flex space-x-6">
                 <li><a href="#" class="text-indigo-400 hover:text-indigo-500">Home</a></li>
                 <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
             </ul>
         </div>
         
@@ -39,7 +39,7 @@
             <ul class="flex flex-col space-y-4 p-4">
                 <li><a href="#" class="text-indigo-400">Home</a></li>
                 <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
             </ul>
         </div>
     </header>
@@ -72,34 +72,7 @@
         </div>
     </section>
 </div>
-   
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          VANTA.NET({
-            el: "#vanta",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x993fff,
-            backgroundColor: 0x0,
-            points: 20.00,
-            maxDistance: 24.00,
-            spacing: 20.00
-          });
-        });
-      </script>
-    
-    <script>
-        const burgerMenu = document.getElementById('burger-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        burgerMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden'); 
-        });
-    </script>
+<script src="vanta.js"></script>
+<script src="burger.js"></script>
 </body>
 </html>
