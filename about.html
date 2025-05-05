@@ -12,6 +12,7 @@
          <!-- Vanta.js and Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+
     </head>
 <body class="bg-gray-900 text-white font-montserrat">
 
@@ -27,7 +28,7 @@
             <ul id="nav-links" class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
                 <li><a href="about.html" class="text-indigo-400 hover:text-indigo-500">About</a></li>
-                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
             </ul>
         </div>
         <!-- Mobile Menu -->
@@ -35,7 +36,7 @@
             <ul class="flex flex-col space-y-4 p-4">
                 <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
                 <li><a href="about.html" class="text-indigo-400">About</a></li>
-                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
             </ul>
         </div>
     </header>
@@ -60,40 +61,7 @@
         </div>
     </section>
 </div>
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-6">
-        <div class="container mx-auto text-center">
-            <p class="text-gray-400">&copy; 2023 John Cyrus Agoncillo. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          VANTA.NET({
-            el: "#vanta",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x993fff,
-            backgroundColor: 0x0,
-            points: 20.00,
-            maxDistance: 24.00,
-            spacing: 20.00
-          });
-        });
-      </script>
-    <!-- JavaScript for Navbar -->
-    <script>
-        const burgerMenu = document.getElementById('burger-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        burgerMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden'); // Show or hide the mobile menu
-        });
-    </script>
+<script src="vanta.js"></script>
+<script src="burger.js"></script>
 </body>
 </html>
