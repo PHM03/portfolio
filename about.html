@@ -4,31 +4,92 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>John Cyrus Agoncillo | About</title>
-        <link rel="stylesheet" href="Design.css">
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="AboutMe.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+         <!-- Vanta.js and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
     </head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">John Cyrus Agoncillo</a>
+<body class="bg-gray-900 text-white font-montserrat">
 
-        <nav>
-            <a href="index.html" >Home Page</a>
-            <a href="#" class="active">About</a>
-            <a href="techstack.html" >Tech Stack</a>
-        </nav>
+    <!-- Navbar -->
+    <header class="bg-gray-800 fixed w-full z-10 shadow">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-400">John Cyrus Agoncillo</a>
+            <button id="burger-menu" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <ul id="nav-links" class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-400">Home Page</a></li>
+                <li><a href="about.html" class="text-indigo-400 hover:text-indigo-500">About</a></li>
+                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a href="index.html" class="hover:text-indigo-400">Home Page</a></li>
+                <li><a href="about.html" class="text-indigo-400">About</a></li>
+                <li><a href="techstack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+            </ul>
+        </div>
     </header>
+    <div id="vanta" class="min-h-screen flex items-center justify-center">
 
-     
-     
-    <section class="home">
-        <div class="home-content">
-            <h1><span> About Me</span></h1>
-            <p>I am John Cyrus Agoncillo, currently a student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT). I am passionate about expanding my knowledge and skills in the field of technology. I believe in the power of a growth mindset, understanding that challenges and setbacks are opportunities for learning and improvement. With a positive outlook, I embrace failures as stepping stones to success and continuously strive to grow, innovate, and contribute meaningfully to the tech industry.  </p>
-            <div class="social-icons">  
+    <!-- About Section -->
+    <section class="min-h-screen flex items-center justify-center py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 items-center">
+                <!-- Left Column: Text -->
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-400 mb-6">About Me</h1>
+                    <p class="text-lg leading-relaxed mb-6">
+                        I am John Cyrus Agoncillo, currently a student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT). I am passionate about expanding my knowledge and skills in the field of technology. I believe in the power of a growth mindset, understanding that challenges and setbacks are opportunities for learning and improvement. With a positive outlook, I embrace failures as stepping stones to success and continuously strive to grow, innovate, and contribute meaningfully to the tech industry.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
-    
+</div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">&copy; 2023 John Cyrus Agoncillo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          VANTA.NET({
+            el: "#vanta",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x993fff,
+            backgroundColor: 0x0,
+            points: 20.00,
+            maxDistance: 24.00,
+            spacing: 20.00
+          });
+        });
+      </script>
+    <!-- JavaScript for Navbar -->
+    <script>
+        const burgerMenu = document.getElementById('burger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Show or hide the mobile menu
+        });
+    </script>
 </body>
 </html>
