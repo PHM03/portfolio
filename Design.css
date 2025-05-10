@@ -10,7 +10,7 @@
 
 #typing-text span::before{
     content: "Gamer";
-    color:  rgb(79, 46, 228);
+    color:  rgb(255, 0, 0);
     animation: words 10s infinite;
 }
 
@@ -27,7 +27,7 @@
 
 @keyframes cursor{
     to{
-        border-left: 3px solid rgb(79, 46, 228);
+        border-left: 3px solid rgb(255, 0, 0);
     }
 }
 
@@ -48,5 +48,3 @@
         content: " Youtuber"
     }
 }
-
- 

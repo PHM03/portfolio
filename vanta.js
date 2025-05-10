@@ -1,4 +1,3 @@
- 
     document.addEventListener("DOMContentLoaded", () => {
       VANTA.NET({
         el: "#vanta",
@@ -9,7 +8,7 @@
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x993fff,
+        color: 0x4100ff,
         backgroundColor: 0x0,
         points: 20.00,
         maxDistance: 24.00,
@@ -18,12 +17,9 @@
     });
   
 
-
- 
     const burgerMenu = document.getElementById('burger-menu');
     const mobileMenu = document.getElementById('mobile-menu');
 
     burgerMenu.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden'); 
     });
- 

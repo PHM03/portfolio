@@ -34,7 +34,7 @@ header{
 }
 .logo{
     font-size: 3rem;
-    color: rgb(79, 46, 228);
+    color: rgb(255, 0, 0);
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -54,8 +54,8 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color: rgb(79, 46, 228);
-    border-bottom: 3px solid rgb(79, 46, 228);
+    color: rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
 }
 @media(max-width:995px){
     nav {
@@ -64,8 +64,8 @@ nav a.active{
         top: 0;
         right: 0;
         width:40%;
-        border-left: 3px solid rgb(79, 46, 228);
-        border-bottom: 3px solid rgb(79, 46, 228);
+        border-left: 3px solid rgb(255, 0, 0);
+        border-bottom: 3px solid rgb(255, 0, 0);
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background: color #161616;
@@ -85,7 +85,7 @@ nav a.active{
     nav a.active{
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5 solid rgb(79, 46, 228);
+        border-bottom: 0.5 solid rgb(255, 0, 0);
     }
 }
 
@@ -106,17 +106,17 @@ section{
     font-size:6rem;
     font-weight: 700;
     line-height: 1.3;
-    color: rgb(79, 46, 228); /* Set "ABOUT ME" text color */
+    color: rgb(255, 0, 0); /* Set "ABOUT ME" text color */
 }
 
 span{
-    color: rgb(79, 46, 228);
+    color: rgb(255, 0, 0);
 }
 
 .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(79, 46, 228) !important; /* Set "JOHN CYRUS AGONCILLO" text color */
+    color: rgb(255, 0, 0) !important; /* Set "JOHN CYRUS AGONCILLO" text color */
 }
 
 .home-content h3{
@@ -137,7 +137,7 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid rgb(79, 46, 228);
+    box-shadow: 0 0 25px solid rgb(255, 0, 0);
     cursor: pointer;
     transition: 0.2s linear;
 }

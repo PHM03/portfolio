@@ -35,3 +35,9 @@ body {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.techBorder {
+    width: 160px;
+    height: 160px;
+    justify-self: center;
+}
