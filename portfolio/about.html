@@ -1,67 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>John Cyrus Agoncillo | About</title>
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-<!-- Vanta.js and Three.js -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>John Cyrus Agoncillo | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
-
-    </head>
-<body class="bg-gray-900 text-white font-montserrat">
-
-    <!-- Navbar -->
-    <header class="bg-gray-800 fixed w-full z-10 shadow">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-400">John Cyrus Agoncillo</a>
-            <button id="burger-menu" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+</head>
+<body class="min-h-screen bg-slate-950 font-['Montserrat'] text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+            <a href="index.html" class="text-lg font-bold tracking-tight text-white sm:text-xl">John Cyrus <span class="text-indigo-400">Agoncillo</span></a>
+            <button id="burger-menu" class="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400 md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
-            <ul id="nav-links" class="hidden md:flex space-x-6">
-                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="about.html" class="text-indigo-400 hover:text-indigo-500">About</a></li>
-                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li><a href="index.html" class="text-slate-300 transition hover:text-white">Home</a></li>
+                <li><a href="about.html" aria-current="page" class="text-indigo-300">About</a></li>
+                <li><a href="tech-stack.html" class="text-slate-300 transition hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="text-slate-300 transition hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="text-slate-300 transition hover:text-white">Projects</a></li>
             </ul>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <ul class="flex flex-col space-y-4 p-4">
-                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="about.html" class="text-indigo-400">About</a></li>
-                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+        </nav>
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+            <ul class="container mx-auto flex flex-col gap-1 px-5 py-3">
+                <li><a href="index.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Home</a></li>
+                <li><a href="about.html" aria-current="page" class="block rounded-lg px-3 py-2 text-indigo-300">About</a></li>
+                <li><a href="tech-stack.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Projects</a></li>
             </ul>
         </div>
     </header>
-    <div id="vanta" class="min-h-screen flex items-center justify-center">
 
-    <!-- About Section -->
-    <section class="min-h-screen flex items-center justify-center py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 items-center">
-                <!-- Left Column: Text -->
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-400 mb-6">About Me</h1>
-                    <p class="text-lg leading-relaxed mb-6">
-                        I am John Cyrus Agoncillo, currently a student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT).
-                    </p>
-                </div>
-                <div>
-                    <p class="text-lg leading-relaxed mb-6">
-                        I am passionate about expanding my knowledge and skills in the field of technology. I believe in the power of a growth mindset, understanding that challenges and setbacks are opportunities for learning and improvement. With a positive outlook, I embrace failures as stepping stones to success and continuously strive to grow, innovate, and contribute meaningfully to the tech industry.                    </p>
-                </div>
+    <main id="vanta" class="relative isolate min-h-screen overflow-hidden bg-slate-950">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950/60 via-slate-950/80 to-slate-950"></div>
+        <section class="container mx-auto flex min-h-screen max-w-4xl items-center px-6 pb-16 pt-28 md:px-10" aria-labelledby="about-title">
+            <div class="w-full rounded-3xl border border-white/10 bg-slate-900/65 p-7 shadow-2xl shadow-indigo-950/30 backdrop-blur-sm sm:p-10 lg:p-14">
+                <p class="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-indigo-300">A little about me</p>
+                <h1 id="about-title" class="text-4xl font-bold tracking-tight sm:text-5xl">About <span class="text-indigo-300">Me</span></h1>
+                <p class="mt-7 text-base leading-8 text-slate-300 sm:text-lg">I am John Cyrus Agoncillo, currently a student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT).</p>
+                <p class="mt-5 text-base leading-8 text-slate-300 sm:text-lg">I am passionate about expanding my knowledge and skills in technology. I believe challenges and setbacks are opportunities to learn and improve. I embrace that growth mindset and continue working toward a future in the tech industry.</p>
+                <a href="tech-stack.html" class="mt-8 inline-flex items-center rounded-xl border border-indigo-300/40 bg-indigo-400/10 px-5 py-3 font-semibold text-indigo-100 transition hover:bg-indigo-400/20 focus:outline-none focus:ring-2 focus:ring-indigo-200">Explore my tech stack <span class="ml-2" aria-hidden="true">→</span></a>
             </div>
-        </div>
-    </section>
-</div>
-<script src="vanta.js"></script>
-<script src="burger.js"></script>
+        </section>
+    </main>
+    <script src="vanta.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

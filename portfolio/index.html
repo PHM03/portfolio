@@ -1,62 +1,108 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Cyrus Agoncillo | Home</title>
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="The portfolio of John Cyrus Agoncillo, an IT student and aspiring web programmer.">
+    <title>John Cyrus Agoncillo | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white font-montserrat">
-
-
-    <header class="bg-gray-800 fixed w-full z-10 shadow">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-400">John Cyrus Agoncillo</a>
-            <button id="burger-menu" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+<body class="min-h-screen bg-slate-950 font-['Montserrat'] text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+            <a href="index.html" class="text-lg font-bold tracking-tight text-white sm:text-xl">John Cyrus <span class="text-indigo-400">Agoncillo</span></a>
+            <button id="burger-menu" class="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400 md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
-            <ul id="nav-links" class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-indigo-400 hover:text-indigo-500">Home</a></li>
-                <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li><a href="index.html" aria-current="page" class="text-indigo-300">Home</a></li>
+                <li><a href="about.html" class="text-slate-300 transition hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="text-slate-300 transition hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="text-slate-300 transition hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="text-slate-300 transition hover:text-white">Projects</a></li>
             </ul>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <ul class="flex flex-col space-y-4 p-4">
-                <li><a href="#" class="text-indigo-400">Home</a></li>
-                <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="tech-stack.html" class="hover:text-indigo-400">Tech Stack</a></li>
+        </nav>
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+            <ul class="container mx-auto flex flex-col gap-1 px-5 py-3">
+                <li><a href="index.html" aria-current="page" class="block rounded-lg px-3 py-2 text-indigo-300">Home</a></li>
+                <li><a href="about.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Projects</a></li>
             </ul>
         </div>
     </header>
 
-    <div id="vanta" class="min-h-screen flex items-center justify-center">
-    <section class="home min-h-screen flex flex-col lg:flex-row items-center justify-center text-center lg:text-left pt-20 px-4 lg:px-16">
-        <div class="home-img mb-8 lg:mb-0 lg:mr-8">
-            <img src="Profile-pic.png" alt="Profile Picture" class="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full shadow-lg">
-        </div>
-        <div class="home-content">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Hey! It's <span class="text-indigo-400">John Cyrus Agoncillo</span></h1>
-            <h3 class="text-lg md:text-xl lg:text-3xl font-semibold mb-4">I'm a <span class="text-indigo-400" id="typing-text">Web Programmer</span></h3>
-            <p class="text-sm md:text-base lg:text-lg leading-relaxed mb-6">
-                Inspired Web Programmer. Student from St. Dominic College of Asia. Ready to learn and adapt things through my journey.
-            </p>
-            <div class="social-icons flex space-x-4 justify-center lg:justify-start mb-6">
-                <a href="https://github.com/sdca-john-cyrus-agoncillo" target="_blank">
-                    <img src="github2.png" alt="GitHub" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
-                </a>
+    <main id="vanta" class="relative isolate flex min-h-screen items-center overflow-hidden bg-slate-950">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950/60 via-slate-950/80 to-slate-950"></div>
+        <section class="container mx-auto grid min-h-screen items-center gap-12 px-6 pb-16 pt-28 md:grid-cols-[1.2fr_0.8fr] md:px-10 lg:gap-20 lg:px-16" aria-labelledby="intro-title">
+            <div class="order-2 text-center md:order-1 md:text-left">
+                <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-300/25 bg-indigo-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-200 sm:text-sm">
+                    <span class="h-2 w-2 rounded-full bg-indigo-300"></span> IT Student · Web Programmer
+                </p>
+                <h1 id="intro-title" class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Hello, I’m <span class="text-indigo-300">John Cyrus Agoncillo.</span></h1>
+                <h2 class="mt-5 text-xl font-semibold text-slate-200 sm:text-2xl">I’m a <span id="role-text" class="text-indigo-300">Web Developer</span><span class="ml-1 inline-block h-6 w-0.5 animate-pulse bg-indigo-300 align-middle" aria-hidden="true"></span></h2>
+                <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg md:mx-0">I’m an Information Technology student at St. Dominic College of Asia with a passion for web programming. I’m ready to learn, adapt, and keep improving throughout my journey.</p>
+                <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
+                    <a href="about.html" class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-indigo-950/40 transition hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-offset-2 focus:ring-offset-slate-950">More about me <span class="ml-2" aria-hidden="true">→</span></a>
+                    <a href="tech-stack.html" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-indigo-300/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-offset-2 focus:ring-offset-slate-950">Explore my tech stack</a>
+                </div>
+                <div class="mt-8 flex justify-center md:justify-start">
+                    <a href="https://github.com/sdca-john-cyrus-agoncillo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-lg text-slate-300 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-300" aria-label="Visit John Cyrus Agoncillo on GitHub (opens in a new tab)">
+                        <img src="github2.png" alt="" class="h-8 w-8 object-contain">
+                        <span class="text-sm font-medium">Find me on GitHub</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
-<script src="vanta.js"></script>
-<script src="burger.js"></script>
+            <div class="order-1 flex justify-center md:order-2">
+                <div class="relative">
+                    <div class="absolute -inset-4 rounded-full bg-indigo-500/20 blur-2xl" aria-hidden="true"></div>
+                    <div class="relative rounded-full border border-indigo-300/30 bg-slate-900/70 p-3 shadow-2xl shadow-indigo-950/50">
+                        <img src="Profile-pic.png" alt="Portrait of John Cyrus Agoncillo" class="h-48 w-48 rounded-full object-cover sm:h-60 sm:w-60 lg:h-72 lg:w-72">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        (() => {
+            const roleElement = document.getElementById('role-text');
+            const roles = ['Web Developer', 'Web Designer', 'Content Creator', 'Student'];
+            let roleIndex = 0;
+            let characterIndex = roles[0].length;
+            let deleting = false;
+
+            function typeRole() {
+                const role = roles[roleIndex];
+                roleElement.textContent = role.slice(0, characterIndex);
+
+                if (!deleting && characterIndex === role.length) {
+                    deleting = true;
+                    window.setTimeout(typeRole, 1400);
+                    return;
+                }
+                if (deleting && characterIndex === 0) {
+                    deleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+
+                characterIndex += deleting ? -1 : 1;
+                window.setTimeout(typeRole, deleting ? 65 : 105);
+            }
+
+            window.setTimeout(() => {
+                deleting = true;
+                typeRole();
+            }, 1400);
+        })();
+    </script>
+    <script src="vanta.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

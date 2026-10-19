@@ -3,102 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
     <title>John Cyrus Agoncillo | Tech Stack</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
-
 </head>
-<body class="bg-gray-900 text-white font-montserrat">
-
-
-    <header class="bg-gray-800 fixed w-full z-10 shadow">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-400">John Cyrus Agoncillo</a>
-            <button id="burger-menu" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+<body class="min-h-screen bg-slate-950 font-['Montserrat'] text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+            <a href="index.html" class="text-lg font-bold tracking-tight text-white sm:text-xl">John Cyrus <span class="text-indigo-400">Agoncillo</span></a>
+            <button id="burger-menu" class="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400 md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
-            <ul id="nav-links" class="hidden md:flex space-x-6">
-                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="#" class="text-indigo-400">Tech Stack</a></li>
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li><a href="index.html" class="text-slate-300 transition hover:text-white">Home</a></li>
+                <li><a href="about.html" class="text-slate-300 transition hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" aria-current="page" class="text-indigo-300">Tech Stack</a></li>
+                <li><a href="achievements.html" class="text-slate-300 transition hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="text-slate-300 transition hover:text-white">Projects</a></li>
             </ul>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <ul class="flex flex-col space-y-4 p-4">
-                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="#" class="text-indigo-400">Tech Stack</a></li>
+        </nav>
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+            <ul class="container mx-auto flex flex-col gap-1 px-5 py-3">
+                <li><a href="index.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Home</a></li>
+                <li><a href="about.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" aria-current="page" class="block rounded-lg px-3 py-2 text-indigo-300">Tech Stack</a></li>
+                <li><a href="achievements.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Projects</a></li>
             </ul>
         </div>
     </header>
-    <body class="bg-gray-900 text-white font-montserrat">
 
-        <div id="vanta" class="min-h-screen flex items-center justify-center">
-
-    <section class="techstack min-h-screen flex flex-col items-center justify-center pt-20">
-        <div class="container text-center">
-            <h1 class="text-4xl font-bold text-indigo-400 mb-4">My Tech Stack</h1>
-            <p class="text-lg text-gray-300 mb-8">Here are some of the technologies I have worked with:</p>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="letter-c.png" alt="C Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">C </h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="html-5.png" alt="HTML Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">HTML</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="java.png" alt="Java Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">Java</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="blender-3d.png" alt="Blender Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">Blender</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="android.png" alt="Android Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">Android Studio</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="github2.png" alt="GitHub Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">Github</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="visual-studio.png" alt="visual studio Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">VS Code</h5>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="css-512.png" alt="CSS Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">CSS</h5>
-                </div>
-
-                <div class="techBorder bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-                    <img src="Nodejs1.png" alt="Node Logo" class="w-20 h-20 mx-auto mb-4">
-                    <h5 class="text-xl font-bold text-indigo-400">Node</h5>
-                </div>
-
+    <main id="vanta" class="relative isolate min-h-screen overflow-hidden bg-slate-950">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950/60 via-slate-950/80 to-slate-950"></div>
+        <section class="container mx-auto px-6 pb-20 pt-32 md:px-10" aria-labelledby="stack-title">
+            <div class="mx-auto mb-10 max-w-2xl text-center">
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-indigo-300">Tools I use and explore</p>
+                <h1 id="stack-title" class="text-4xl font-bold tracking-tight sm:text-5xl">My <span class="text-indigo-300">Tech Stack</span></h1>
+                <p class="mt-4 text-base leading-7 text-slate-300 sm:text-lg">Technologies and tools I have worked with.</p>
             </div>
-        </div>
-    </section>
-</div>
-<script src="vanta.js"></script>
-<script src="burger.js"></script>
+            <div class="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="letter-c.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">C</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="html-5.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">HTML</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="java.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Java</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="blender-3d.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Blender</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="android.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Android Studio</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="github2.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">GitHub</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="visual-studio.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">VS Code</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="css-512.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">CSS</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="Nodejs1.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Node</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="Postman.jfif" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Postman</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="MongoDB.png" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">MongoDB</h2>
+                </article>
+                <article class="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-800/80 p-5 text-center shadow-lg transition hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-800">
+                    <img src="render.jpg" alt="" class="mb-4 h-16 w-16 object-contain"><h2 class="text-lg font-bold text-indigo-300">Render</h2>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="vanta.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

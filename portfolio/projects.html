@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>John Cyrus Agoncillo | Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+</head>
+<body class="min-h-screen bg-slate-950 font-['Montserrat'] text-white antialiased">
+    <div id="vanta" class="pointer-events-none fixed inset-x-0 bottom-0 top-[72px] z-0 bg-slate-950 md:top-[60px]" aria-hidden="true"></div>
+    <header class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+            <a href="index.html" class="text-lg font-bold tracking-tight text-white sm:text-xl">John Cyrus <span class="text-indigo-400">Agoncillo</span></a>
+            <button id="burger-menu" class="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400 md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li><a href="index.html" class="text-slate-300 transition hover:text-white">Home</a></li>
+                <li><a href="about.html" class="text-slate-300 transition hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="text-slate-300 transition hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="text-slate-300 transition hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" aria-current="page" class="text-indigo-300">Projects</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+            <ul class="container mx-auto flex flex-col gap-1 px-5 py-3">
+                <li><a href="index.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Home</a></li>
+                <li><a href="about.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Achievements</a></li>
+                <li><a href="projects.html" aria-current="page" class="block rounded-lg px-3 py-2 text-indigo-300">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="relative isolate z-10 min-h-screen overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950/60 via-slate-950/80 to-slate-950"></div>
+        <section class="container mx-auto max-w-4xl px-6 pb-20 pt-32 md:px-10" aria-labelledby="projects-title">
+            <div class="mb-8 text-center">
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-indigo-300">Selected work</p>
+                <h1 id="projects-title" class="text-4xl font-bold tracking-tight sm:text-5xl">My <span class="text-indigo-300">Projects</span></h1>
+            </div>
+            <div class="space-y-8">
+                <article class="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/75 shadow-2xl shadow-indigo-950/30 backdrop-blur-sm">
+                    <div class="border-b border-indigo-300/20 bg-slate-950/80 p-5 sm:p-8">
+                        <img src="assets/projects/eroom-reserve.png" alt="eRoom Reserve project logo showing a room, mobile reservation screen, and Bluetooth signal" loading="lazy" decoding="async" class="mx-auto block aspect-[2/1] w-full max-w-2xl rounded-xl border-2 border-indigo-300/40 bg-white object-cover object-center shadow-xl shadow-indigo-950/40">
+                    </div>
+                    <div class="p-7 sm:p-10">
+                        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-indigo-300">Campus Room Booking | IoT</p>
+                        <h2 class="text-xl font-bold leading-snug text-white sm:text-2xl">e-RoomReserve: AI-Driven Smart Campus Space Optimization System with Real-Time Occupancy Detection and Autonomous Reservation Control using Bluetooth Low Energy (BLE) Technology</h2>
+                        <p class="mt-5 text-base leading-8 text-slate-300 sm:text-lg">St. Dominic College of Asia manages multiple classrooms and meeting spaces that require efficient scheduling and monitoring to maximize utilization. Traditional reservation systems rely on manual booking and periodic physical checks, which lead to no-shows, double bookings, unverified use of spaces, and inefficient space allocation. Advances in Internet of Things (IoT) technologies — specifically Bluetooth Low Energy (BLE) beacon technology — enable low-cost, real-time verification of room occupancy. This project proposes a campus-tailored solution that integrates a mobile and web reservation application, a faculty approval workflow, BLE-based presence detection and occupancy monitoring, an automated staff notification system, and an AI-based room recommendation feature that assists users in selecting appropriate spaces based on availability and room attributes, while incorporating post-reservation feedback analysis to support facility management decisions.</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/75 shadow-2xl shadow-indigo-950/30 backdrop-blur-sm">
+                    <div class="border-b border-indigo-300/20 bg-slate-950/80 p-5 sm:p-8">
+                        <img src="assets/projects/sarisite.png" alt="SariSite logo showing a sari-sari store and mobile online ordering" loading="lazy" decoding="async" class="mx-auto block aspect-[4/3] w-full max-w-2xl rounded-xl border-2 border-indigo-300/40 bg-white object-cover object-center shadow-xl shadow-indigo-950/40">
+                    </div>
+                    <div class="p-7 sm:p-10">
+                        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-indigo-300">Online Ordering | Community Commerce</p>
+                        <h2 class="text-xl font-bold leading-snug text-white sm:text-2xl">SariSite: Enhancing Accessibility of Localized Sari-Sari Stores in Philippine Subdivision Through Online Ordering</h2>
+                        <p class="mt-5 text-base leading-8 text-slate-300 sm:text-lg">Sari-sari stores are an integral part of Filipino communities, serving as convenient sources of daily necessities within neighborhoods. However, many of these stores remain limited to traditional face-to-face transactions, which can be time-consuming and less accessible to residents with busy schedules or mobility constraints. With the increasing reliance on digital platforms for everyday needs, integrating an online ordering system for localized sari-sari stores offers a practical solution to improve accessibility and convenience. This study explores how such a system can enhance customer experience, streamline store operations, and strengthen the role of sari-sari stores in Philippine subdivisions.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="vanta.js"></script>
+    <script src="burger.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>John Cyrus Agoncillo | Achievements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+</head>
+<body class="min-h-screen bg-slate-950 font-['Montserrat'] text-white antialiased">
+    <div id="vanta" class="pointer-events-none fixed inset-x-0 bottom-0 top-[72px] z-0 bg-slate-950 md:top-[60px]" aria-hidden="true"></div>
+    <header class="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+            <a href="index.html" class="text-lg font-bold tracking-tight text-white sm:text-xl">John Cyrus <span class="text-indigo-400">Agoncillo</span></a>
+            <button id="burger-menu" class="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400 md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li><a href="index.html" class="text-slate-300 transition hover:text-white">Home</a></li>
+                <li><a href="about.html" class="text-slate-300 transition hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="text-slate-300 transition hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" aria-current="page" class="text-indigo-300">Achievements</a></li>
+                <li><a href="projects.html" class="text-slate-300 transition hover:text-white">Projects</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+            <ul class="container mx-auto flex flex-col gap-1 px-5 py-3">
+                <li><a href="index.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Home</a></li>
+                <li><a href="about.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">About</a></li>
+                <li><a href="tech-stack.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Tech Stack</a></li>
+                <li><a href="achievements.html" aria-current="page" class="block rounded-lg px-3 py-2 text-indigo-300">Achievements</a></li>
+                <li><a href="projects.html" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-white/5 hover:text-white">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="relative isolate z-10 min-h-screen overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950/60 via-slate-950/80 to-slate-950"></div>
+        <section class="container mx-auto px-6 pb-20 pt-32 md:px-10" aria-labelledby="achievements-title">
+            <div class="mx-auto mb-10 max-w-2xl text-center">
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-indigo-300">Certificates and badges</p>
+                <h1 id="achievements-title" class="text-4xl font-bold tracking-tight sm:text-5xl">My <span class="text-indigo-300">Achievements</span></h1>
+                <p class="mt-4 text-base leading-7 text-slate-300 sm:text-lg">Badges and certifications I have earned.</p>
+            </div>
+            <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+                <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-indigo-950/20">
+                    <a href="assets/achievements/introduction-to-iot.png" target="_blank" rel="noopener noreferrer" aria-label="View Introduction to IoT badge image">
+                        <img src="assets/achievements/introduction-to-iot.png" alt="Cisco Networking Academy Introduction to Internet of Things verified badge" loading="lazy" decoding="async" class="aspect-[16/9] w-full bg-white object-contain">
+                    </a>
+                    <div class="p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Cisco Networking Academy</p>
+                        <h2 class="mt-2 text-xl font-bold text-white">Introduction to IoT</h2>
+                        <p class="mt-2 text-sm text-slate-300">Issued March 3, 2026</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-indigo-950/20">
+                    <a href="assets/achievements/it-specialist-cybersecurity.png" target="_blank" rel="noopener noreferrer" aria-label="View IT Specialist Cybersecurity badge image">
+                        <img src="assets/achievements/it-specialist-cybersecurity.png" alt="Certiport IT Specialist Cybersecurity certification badge" loading="lazy" decoding="async" class="aspect-[16/9] w-full bg-white object-contain">
+                    </a>
+                    <div class="p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Certiport · Pearson VUE</p>
+                        <h2 class="mt-2 text-xl font-bold text-white">IT Specialist: Cybersecurity</h2>
+                        <p class="mt-2 text-sm text-slate-300">Issued June 2, 2026 · Expires June 3, 2031</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-indigo-950/20">
+                    <a href="assets/achievements/it-specialist-databases.png" target="_blank" rel="noopener noreferrer" aria-label="View IT Specialist Databases badge image">
+                        <img src="assets/achievements/it-specialist-databases.png" alt="Certiport IT Specialist Databases certification badge" loading="lazy" decoding="async" class="aspect-[16/9] w-full bg-white object-contain">
+                    </a>
+                    <div class="p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Certiport · Pearson VUE</p>
+                        <h2 class="mt-2 text-xl font-bold text-white">IT Specialist: Databases</h2>
+                        <p class="mt-2 text-sm text-slate-300">Issued May 6, 2025</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-indigo-950/20">
+                    <a href="assets/achievements/it-specialist-html-css.png" target="_blank" rel="noopener noreferrer" aria-label="View IT Specialist HTML and CSS badge image">
+                        <img src="assets/achievements/it-specialist-html-css.png" alt="Certiport IT Specialist HTML and CSS certification badge" loading="lazy" decoding="async" class="aspect-[16/9] w-full bg-white object-contain">
+                    </a>
+                    <div class="p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Certiport · Pearson VUE</p>
+                        <h2 class="mt-2 text-xl font-bold text-white">IT Specialist: HTML and CSS</h2>
+                        <p class="mt-2 text-sm text-slate-300">Issued February 4, 2026 · Expires February 4, 2031</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-indigo-950/20 md:col-span-2 md:mx-auto md:w-1/2">
+                    <a href="assets/achievements/microsoft-word-associate.png" target="_blank" rel="noopener noreferrer" aria-label="View Microsoft Office Specialist Word Associate badge image">
+                        <img src="assets/achievements/microsoft-word-associate.png" alt="Microsoft Office Specialist Word Associate Office 2019 badge" loading="lazy" decoding="async" class="aspect-[16/9] w-full bg-white object-contain">
+                    </a>
+                    <div class="p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Microsoft</p>
+                        <h2 class="mt-2 text-xl font-bold text-white">Microsoft Office Specialist: Word Associate (Office 2019)</h2>
+                        <p class="mt-2 text-sm text-slate-300">Issued March 13, 2024</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="vanta.js"></script>
+    <script src="burger.js"></script>
+</body>
+</html>
